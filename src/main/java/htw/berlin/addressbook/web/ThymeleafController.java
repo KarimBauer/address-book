@@ -30,7 +30,12 @@ public class ThymeleafController {
     }
 
     @GetMapping(path=Endpoints.VUE)
-    public ModelAndView showVue(){
+     public ModelAndView showVue(){
         return new ModelAndView(ViewNames.VUE);
+    }
+
+    @GetMapping(path=Endpoints.VUEDYNAMIC)
+    public ModelAndView showVueDynamic(){
+        return new ModelAndView(ViewNames.VUEDYNAMIC);
     }
 }

@@ -6,6 +6,18 @@ app.component('button-counter', {
     data() {
         return {
             count: 0
+            
+        }
+    },
+    methods:{
+        clickedALot(){
+            if(count>10){
+                count="a lot of"
+            }
+            else{
+                count++
+            }
+            return count
         }
     },
     template: `
