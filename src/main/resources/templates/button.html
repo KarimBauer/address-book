@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Like this Button!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!--Einbindung der passenden js datei (die unter resources:static liegen muss-->
+    <script type="module" src="#" th:src="@{button.js}" defer></script>
+</head>
+<body>
+<h2>Like this button</h2>
+    <div id="button-counter">
+        <!--Hier wird button dann aus js.datei geladen-->
+        <button-counter style="height:200px;width:200px"></button-counter>
+</div>
+</body>
+</html>
