@@ -12,6 +12,14 @@ jar {
 	}
 }
 
+tasks {
+	jar {
+		enabled = true
+		archiveClassifier.set("plain")
+	}
+}
+
+
 group = 'htw.berlin'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '16'
