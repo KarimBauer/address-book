@@ -1,6 +1,7 @@
 package htw.berlin.addressbook.address;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -31,6 +32,12 @@ public class AddressController {
         addressService.deleteAddress(addressId);
     }
 
+    @RequestMapping(value = "/listaddresses", method = RequestMethod.GET)
+    public String addressesTable(Model model){
+        List<Address> addresses = addressService.getAddresses();
+        model.addAttribute("addresses", addresses);
+        return "getaddresses";
+    }
     /**@PutMapping(path = "{addressId}")
     public void updateAddress(
             @PathVariable("addressId") Long addressId,
