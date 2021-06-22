@@ -1,10 +1,14 @@
 package htw.berlin.addressbook.web;
 
+import htw.berlin.addressbook.address.Address;
 import htw.berlin.addressbook.config.Endpoints;
 import htw.berlin.addressbook.config.ViewNames;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
 
 @Controller
 public class ThymeleafController {
@@ -37,5 +41,10 @@ public class ThymeleafController {
     @GetMapping(path=Endpoints.VUEDYNAMIC)
     public ModelAndView showVueDynamic(){
         return new ModelAndView(ViewNames.VUEDYNAMIC);
+    }
+
+    @GetMapping(path=Endpoints.GETADDRESSES)
+    public ModelAndView getAddresses(){
+        return new ModelAndView(ViewNames.GETADDRESSES);
     }
 }

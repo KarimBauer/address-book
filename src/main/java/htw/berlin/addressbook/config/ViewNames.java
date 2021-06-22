@@ -8,4 +8,5 @@ public class ViewNames {
     public static final String ADDRESSBOOK = "addressbook";
     public static final String VUE = "button";
     public static final String VUEDYNAMIC ="vuedynamic";
+    public static final String GETADDRESSES ="getaddresses";
 }
